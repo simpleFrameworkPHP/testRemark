@@ -1,3 +1,20 @@
-<include file="../Public/haeder.html" />
-
-<include file="../Public/footer.html" />
+<extend name="./Public/themes/admin/base.html" />
+<block name="title"><title>{$title}</title></block>
+<block name="menu_top">
+    <a href="/" >首页</a>
+    <a href="/info/" >资讯</a>
+    <a href="/bbs/" >论坛</a>
+</block>
+<block name="menu_left">12312312321</block>
+<block name="content">
+    <volist name="list" id="vo">
+        <a href="/new/{$vo.id}">{$vo.title}</a><br/>
+        {$vo.content}
+    </volist>
+</block>
+<block name="right">
+    最新资讯：
+    <volist name="news" id="new">
+        <a href="/new/{$new.id}">{$new.title}</a><br/>
+    </volist>
+</block>
