@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link content="css/html" rel="stylesheet" href="./Public/admin/css/admin.css"/>
+    <script type="application/javascript" src="./Public/js/jquery.min.js"></script>
+    <block name="title"><title>标题</title></block>
+</head>
+<body>
+<div class="menu_top"><ul><li class="li_logo">logo图片</li><li class="li_menu"><block name="menu_top">菜单</block></li><li class="li_userinfo"><block name="userinfo">用户信息</block></li></ul></div>
+<div  id="content">
+<ul>
+    <li class="menu_left li_content"><block name="menu_left">左边分栏</block></li>
+    <li class="content li_content"><block name="main">主内容</block></li>
+</ul>
+</div>
+<!--<block name="right">右边分栏</block>-->
+</body>
+<script>
+        var widths = document.body.scrollWidth-150;
+        var heights = document.documentElement.clientHeight-100;
+        $("#content").height(heights);
+        $("li.content").height(heights).width(widths);
+</script>
+</html>
